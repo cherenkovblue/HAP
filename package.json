@@ -2,6 +2,10 @@
   "name": "hap",
   "version": "1.0.0",
   "description": "Home Automation Project",
+  "engines": {
+    "node": "10.15.3",
+    "npm": "6.9.0"
+  },
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -10,6 +14,7 @@
   "author": "Hafiz",
   "license": "ISC",
   "dependencies": {
+    "@cloudant/cloudant": "^4.0.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.4"
   }

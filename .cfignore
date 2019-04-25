@@ -7,3 +7,4 @@ README.md
 logs
 *.log
 DO-NOT-UPLOAD.md
+.env

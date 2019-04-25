@@ -4,5 +4,5 @@ applications:
   random-route: false
   memory: 128M
   env: {
-    HAP_DB: "hap-db-prod"
+    HAP_DB_NAME: "hap-db"
   }

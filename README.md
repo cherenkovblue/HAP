@@ -35,3 +35,17 @@ Mobile App:
 ## Links:
 - https://developer.ibm.com/tutorials/learn-nodejs-node-with-cloudant-dbaas/
 - https://www.npmjs.com/package/googleapis
+- https://docs.run.pivotal.io/devguide/deploy-apps/environment-variable.html
+- https://docs.run.pivotal.io/buildpacks/node/node-service-bindings.html
+- https://cloud.ibm.com/docs/services/watson?topic=watson-vcapServices#vcapServices
+- https://cloud.ibm.com/docs/runtimes/nodejs?topic=Nodejs-getting-started#getting-started
+- https://docs.cloudfoundry.org/buildpacks/node/node-tips.html
+- https://cloud.ibm.com/docs/services/Cloudant/api?topic=cloudant-comparison-of-ibm-cloudant-and-couchdb-api-endpoints#comparison-of-ibm-cloudant-and-couchdb-api-endpoints
+
+
+## References
+- ibmcloud target --cf
+- ibmcloud resource service-alias-create Cloudant-HafizMisron --instance-name Cloudant-HafizMisron
+- ibmcloud service bind hafiz Cloudant-HafizMisron
+- ibmcloud cf env hafiz
+- ibmcloud service unbind hafiz Cloudant-HafizMisron

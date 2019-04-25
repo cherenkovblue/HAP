@@ -1,19 +1,20 @@
-const Cloudant = require('@cloudant/cloudant');
-const vcap = require ('./vcap-local.json');
+const Database = require('@cloudant/cloudant');
 
-function dbCloudantConnect() {
+const dbUrl = process.env.NODE_ENV == 'development' ? process.env.COUCH_DB_URL : JSON.parse(process.env.VCAP_SERVICES).cloudantNoSQLDB[0].credentials.url;
+
+function dbConnect() {
     return new Promise((resolve, reject) => {
-        Cloudant({url: vcap.services.cloudantNoSQLDB.credentials.url}, (err, cloudant) => {
+        Database({url: dbUrl}, (err, database) => {
             if(err) {
                 console.log(err);
                 reject(err);
             }
             else {
-                let db = cloudant.use(process.env.HAP_DB || "hap-db-dev");
+                let db = database.use(process.env.HAP_DB_NAME);
                 resolve(db);
             }
         });
     });
 }
 
-module.exports.dbCloudantConnect = dbCloudantConnect;
+module.exports.dbConnect = dbConnect;
